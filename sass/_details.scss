@@ -1,0 +1,277 @@
+.back__btn{
+    padding: 2rem 0;
+    margin-bottom: 0.8rem;
+
+    @include responsive__mode(phone){
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+    }
+
+    @include responsive__mode(tablet-portrait){
+        padding: 2rem 0 2rem 0;
+        margin-bottom: 2rem;
+    }
+
+    &--icon{
+        width: 16px;
+        height: 16px;
+        fill: $veryLightGrey;
+    }
+
+    &--link{
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: $veryLightGrey;
+        background: $darkBlue;
+        padding: 0.5rem 1.5rem;
+        border-radius: 5px;
+        box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &--text{
+        margin-left: 0.4rem;
+    }
+}
+
+.details{
+    padding: 1rem 1.5rem 4rem 1.5rem;
+
+    @include responsive__mode(phone){
+        padding: 1.5rem 3rem 4rem 3rem;
+    }
+
+    &__items{
+        display: flex;
+        flex-direction: column;
+
+        @include responsive__mode(phone){
+            display: flex;
+            flex-direction: column;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        @include responsive__mode(tablet-landscape){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &--img{
+            width: 100%;
+            height: 100%;
+            margin-right: 0;
+            margin-bottom: 1.5rem;
+
+            & img{
+                width: 100%;
+            }
+        }
+
+        @include responsive__mode(phone){
+            &--img{
+                width: 100%;
+                height: 100%;
+                margin-right: 6rem;
+                margin-bottom: 1.5rem;
+    
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+
+        @include responsive__mode(tablet-portrait){
+            &--img{
+                width: 100%;
+                height: 100%;
+                margin-right: 2rem;
+                margin-bottom: 0;
+    
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+
+        @include responsive__mode(tablet-landscape){
+            &--img{
+                width: 40%;
+                height: 100%;
+                margin-right: 5rem;
+    
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+
+        &--texts{
+            padding: 0 0;
+        }
+
+        &--heading{
+            color: $veryLightGrey;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &--details{
+            padding: 0;
+            margin-bottom: 3.5rem;
+            list-style: none;
+            column-count: 0;
+            column-gap: 0;
+
+            &:nth-child(4){
+                margin-bottom: 3rem;
+            }
+
+            @include responsive__mode(phone){
+                padding: 0;
+                margin-bottom: 3.5rem;
+                list-style: none;
+                column-count: 2;
+                column-gap: 5rem;
+            }
+
+            @include responsive__mode(tablet-portrait){
+                padding: 0;
+                margin-bottom: 3.5rem;
+                list-style: none;
+                column-count: 2;
+                column-gap: 1rem;
+            }
+        }
+
+        &--detail{
+            margin-bottom: 0.7rem;
+            font-size: 1rem;
+            color: $veryLightGrey;
+
+            & strong{
+                color: $white;
+            }
+        }
+
+        &--border{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &--countries{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include responsive__mode(phone){
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            @include responsive__mode(tablet-portrait){
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            @include responsive__mode(tablet-landscape){
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        &--country-text{
+            margin-right: 1rem;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: $white;
+
+            @include responsive__mode(phone){
+                margin-right: 1rem;
+                font-size: 1rem;
+                margin-bottom: 0;
+                color: $white;
+            }
+        }
+
+        &--country-items{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: inline-flex;
+        }
+
+        &--country-item{
+            font-size: 0.8rem;
+            background: $darkBlue;
+            padding: 0.4rem 0.8rem;
+            margin-right: 0.5rem;
+            border-radius: 3px;
+            color: $veryLightGrey;
+            cursor: pointer;
+        }
+    }
+}
+
+.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn{
+    background-color: #fff;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+
+    & svg use{
+        fill: $darkGreyLightInput;
+    }
+
+    & p{
+        color: $darkGreyLightInput;
+    }
+}
+
+.detail__text{
+    & h2{
+        color: $darkGreyLightInput;
+    }
+
+    & ul li{
+        color: $darkGreyLightInput;
+        & strong{
+            color: $darkGreyLightInput;
+        }
+    }
+
+    & p {
+        color: $darkGreyLightInput;
+    }
+
+    & .details__items--countries ul li{
+        background: #fff;
+        color: $darkGreyLightInput;
+        box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.toggle__border{
+
+    & p {
+        color: $darkGreyLightInput;
+    }
+
+    & ul li{
+        background: #fff;
+        color: $darkGreyLightInput;
+        box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+    }
+}

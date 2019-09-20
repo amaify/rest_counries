@@ -1,0 +1,186 @@
+.countries{
+    padding: 1.5rem 3rem;
+
+    @include responsive__mode(phone){
+        padding: 1.5rem 2rem;
+    }
+
+    @include responsive__mode(tablet-portrait){
+        padding: 1.2rem 2rem;
+    }
+
+    @include responsive__mode(tablet-landscape){
+        padding: 1.5rem 1.5rem;
+    }
+
+    @include responsive__mode(desktop){
+        padding: 1.5rem 3rem;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        flex-basis: 100%;
+        margin: 0 auto;
+        width:100%;
+        position: relative;
+
+        @include responsive__mode(phone){
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-basis: 100%;
+            position: relative;
+        }
+    }
+
+    &__content{
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+        background: $darkBlue;
+        text-decoration: none;
+        margin-right: 0;
+        border-radius: 5px;
+        overflow: hidden;
+
+        @include responsive__mode(phone){
+            flex-basis: 48%;
+            margin-bottom: 3rem;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            flex-basis: 30%;
+        }
+
+        @include responsive__mode(tablet-landscape){
+            flex-basis: 30%;
+        }
+
+        @include responsive__mode(desktop){
+            flex-basis: 21%;
+        }
+
+        @include responsive__mode(desktop-large){
+        }
+
+        &--img{
+            height: 200px;
+            width: 100%;
+
+            & img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &--details{
+            padding: 1rem 1rem;
+            color: $veryLightGrey;
+
+            &-heading{
+                margin-bottom: 1rem;
+            }
+
+            &-text{
+                font-size: 0.9rem;
+                &:not(:last-child){
+                    margin-bottom: 0.3rem;
+                }  
+
+                & strong{
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+    
+}
+
+.content__switch{
+    background-color: #fff;
+    box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+    
+    & div{
+        color: $darkBlue;
+    }
+}
+
+.error{
+    background: orangered;
+    padding: 1.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 8px 4px rgba(orangered, 0.3);
+    margin: 0 auto;
+    width: 100%;
+    backface-visibility: hidden;
+    animation-name: slideDown;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in;
+
+    @include responsive__mode(phone){
+        width: 80%;
+        padding: 1.5rem 2rem;
+    }
+
+    @include responsive__mode(tablet-portrait){
+        width: 60%;
+    }
+
+    &__text{
+        font-size: 1rem;
+        color: #f9f9f9;
+        text-align: center;
+
+        @include responsive__mode(phone){
+            font-size: 1.1rem;
+        }
+
+        @include responsive__mode(tablet-portrait){
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@keyframes slideDown{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-2rem);
+    }
+
+    50%{
+        opacity: 0.7;
+        visibility: visible;
+        transform: translateY(0.5rem);
+    }
+
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+}
+
+#form.stick{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    background: $darkBlue;
+
+    & div, select{
+        background: $darkGreyLightInput;
+    }
+}

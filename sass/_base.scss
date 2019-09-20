@@ -1,0 +1,63 @@
+// - Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+// - Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+// - Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+// - Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+// - Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+// - White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,800&display=swap');
+
+//Variables colors
+$darkBlue: hsl(209, 23%, 22%);
+$veryDarkBlue: hsl(207, 26%, 17%);
+$veryDarkBlueLight: hsl(200, 15%, 8%);
+$darkGreyLightInput:  hsl(0, 0%, 52%);
+$veryLightGrey: #f9f9f9;
+$white: #ffffff;
+
+//Font Variables
+$homePageFont: 71.4%;
+$detailsPageFont: 62.5%;
+
+//Mixin Area
+@mixin responsive__mode($breakpoint){
+    @if($breakpoint == phone){
+        @media only screen and (min-width: 36.25rem){@content}
+    };
+
+    @if($breakpoint == tablet-portrait){
+        @media only screen and (min-width: 45.625rem){@content}
+    };
+
+    @if($breakpoint == tablet-landscape){
+        @media only screen and (min-width: 56.25rem){@content}
+    };
+
+    @if($breakpoint == desktop){
+        @media only screen and (min-width: 75rem){@content}
+    };
+
+    @if($breakpoint == desktop-large){
+        @media only screen and (min-width: 84.375rem){@content}
+    };
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: $homePageFont;
+    max-width: 1440px;
+    background: $veryDarkBlue;
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0 auto;
+}
+
+.body__theme{
+    background: $veryLightGrey;
+}

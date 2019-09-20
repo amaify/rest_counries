@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REST API and Theme Switcher | Front-End Mentor</title>
+    <link rel="stylesheet" href="./sass/main.css">
+</head>
+<body>
+    <nav class="navigation">
+        <h1 class="navigation__text">Where in the world?</h1>
+        <svg class="navigation__switcher--img">
+            <use xlink:href="./images/sprite.svg#icon-moon1"></use>
+        </svg>
+        <a class="navigation__themeSwitcher">Light Mode</a>
+    </nav>
+
+    <div class="wrapper">
+        <section class="section__form" id="form">
+            <form action="#" class="form">
+                <div class="form__group form__group--search">
+                    <svg class="form__group--icon">
+                        <use xlink:href="./images/sprite.svg#icon-search"></use>
+                    </svg>
+                    <input type="search" name="search" id="search" placeholder="Search for a country...">
+                </div>
+                <div class="form__group form__group--select">
+                    <div class="form__group--label">
+                        <p class="filter">Filter by Region</p>
+                        <svg class="form__group--label-icon">
+                            <use xlink:href="./images/sprite.svg#icon-angle-down"></use>
+                        </svg>
+                    </div>
+                    <ul class="form__group--items">
+                        <li class="form__group--item">All</li>
+                        <li class="form__group--item">Africa</li>
+                        <li class="form__group--item">Asia</li>
+                        <li class="form__group--item">Americas</li>
+                        <li class="form__group--item">Europe</li>
+                        <li class="form__group--item">Oceania</li>
+                        <li class="form__group--item">Polar</li>
+                    </ul>
+                </div>
+            </form>
+        </section>
+            
+        <section class="countries">
+            <div class="countries__wrapper">
+                <!-- <a href="./pages/index.html" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a>
+                <a href="#countries" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a>
+                <a href="#countries" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a>
+                <a href="#countries" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a>
+                <a href="#countries" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a>
+                <a href="#countries" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a>
+                <a href="#countries" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a>
+                <a href="#countries" class="countries__content">
+                    <div class="countries__content--img">
+                        <img src="./images/flag.jpg" alt="country">
+                    </div>
+                    <div class="countries__content--details">
+                        <h1 class="countries__content--details-heading">Germany</h1>
+                        <p class="countries__content--details-text"><strong>Population:</strong>81,770,900</p>
+                        <p class="countries__content--details-text"><strong>Region:</strong>Europe</p>
+                        <p class="countries__content--details-text"><strong>Capital:</strong>Berlin</p>
+                    </div>
+                </a> -->
+            </div>
+        </section>
+
+        <section class="details">
+            <div class="back__btn">
+                <a href="#home" class="back__btn--link">
+                    <svg class="back__btn--icon">
+                        <use xlink:href="../images/sprite.svg#icon-arrow-left"></use>
+                    </svg>
+                    <p class="back__btn--text">Back</p>
+                </a>
+            </div>
+            <div class="details__items">
+                <div class="details__items--img">
+                    
+                </div>
+                <div class="details__items--texts">
+                    
+                    <ul class="details__items--details">
+                        
+                    </ul>
+    
+                    <div class="details__items--countries">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./build/app.bundle.js"></script>
+</body>
+</html>
